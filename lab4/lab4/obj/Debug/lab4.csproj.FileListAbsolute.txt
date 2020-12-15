@@ -1,0 +1,6 @@
+D:\c#\lab4\lab4\bin\Debug\lab4.exe.config
+D:\c#\lab4\lab4\bin\Debug\lab4.exe
+D:\c#\lab4\lab4\bin\Debug\lab4.pdb
+D:\c#\lab4\lab4\obj\Debug\lab4.csproj.CoreCompileInputs.cache
+D:\c#\lab4\lab4\obj\Debug\lab4.exe
+D:\c#\lab4\lab4\obj\Debug\lab4.pdb
