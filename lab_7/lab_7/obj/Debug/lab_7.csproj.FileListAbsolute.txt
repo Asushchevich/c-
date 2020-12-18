@@ -1,0 +1,10 @@
+D:\c#\lab_7\lab_7\obj\Debug\lab_7.csprojAssemblyReference.cache
+D:\c#\lab_7\lab_7\obj\Debug\lab_7.Properties.Resources.resources
+D:\c#\lab_7\lab_7\obj\Debug\lab_7.csproj.GenerateResource.cache
+D:\c#\lab_7\lab_7\obj\Debug\lab_7.csproj.CoreCompileInputs.cache
+D:\c#\lab_7\lab_7\obj\Debug\lab_7.Form1.resources
+D:\c#\lab_7\lab_7\bin\Debug\lab_7.exe.config
+D:\c#\lab_7\lab_7\bin\Debug\lab_7.exe
+D:\c#\lab_7\lab_7\bin\Debug\lab_7.pdb
+D:\c#\lab_7\lab_7\obj\Debug\lab_7.exe
+D:\c#\lab_7\lab_7\obj\Debug\lab_7.pdb
