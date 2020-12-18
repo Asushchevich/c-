@@ -1,91 +1,100 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab6
+namespace lab2
 {
     class Program
     {
 
         static void Main(string[] args)
         {
-            Man man1 = new Man { Surname = "игорь", BirthYear = 2003, Status = "зеленый" };
-            Man man2 = new Man { Surname = "настя", BirthYear = 2001, Status = "красный" };
-            Man man3 = new Man { Surname = "кирилл", BirthYear = 2002, Status = "синий" };
-            Man man4 = new Man { Surname = "алина", BirthYear = 2005, Status = "оранжевый" };
-            Man man5 = new Man { Surname = "данил", BirthYear = 1999, Status = "белый" };
-
-
-            List<Man> mans = new List<Man>();
-            mans.Add(man1);
-            mans.Add(man2);
-            mans.Add(man3);
-            mans.Add(man4);
-            mans.Add(man5);
-            mans.Sort();
-
-            foreach (Man m in mans)
+            A a = new A(10, 10);
+            Console.WriteLine("Значение поля c = " + a.c);
+            B b = new B(10, 10);
+            Console.WriteLine("Значение поля c2 = " + b.c2);
+            B b2 = new B();
+            Console.WriteLine("Значение нового c2 = " + b2.c2);
+            B b3 = new B(10, 5);
+            Console.WriteLine("\nЗначения массива: ");
+            foreach (var i in b3.array)
             {
-                Console.WriteLine($"{m.BirthYear} - {m.Surname} - {m.Status}");
+                Console.Write("{0} ", i);
+            }
+            Console.WriteLine();
+
+            if (b)
+            {
+                Console.WriteLine("b1 = " + true);
+            }
+            else
+            {
+                Console.WriteLine("b1 = " + false);
             }
         }
     }
-    class Man : IComparable
+
+    class A
     {
-        public string Surname { get; set; }
-        public int BirthYear { get; set; }
-        public string Status { get; set; }
 
-        public Man(string Surname, DateTime Birthday, string Status)
+        private float a;
+        private float b;
+
+        public float c
         {
-            this.Surname = Surname;
-            this.BirthYear = BirthYear;
-            this.Status = Status;
+            get { return a + b; }
         }
 
-        public Man()
+        public A(float a, float b)
         {
-
+            this.a = a;
+            this.b = b;
         }
-
-        public virtual int Info()
+        public A()
         {
-            return BirthYear;
-        }
 
-        public int CompareTo(object obj)
-        {
-            Man p = obj as Man;
-            if (p != null)
-                return this.BirthYear.CompareTo(p.BirthYear);
-            else
-                throw new Exception("exception");
         }
     }
-    class Student : Man
+
+    class B : A
     {
-        public int Math { get; set; }
-        public int Physics { get; set; }
-        public int History { get; set; }
+        float d = 10;
 
-
-        public Student(int Math, int Physics, int History)
+        public float c2
         {
-            this.Math = Math;
-            this.Physics = Physics;
-            this.History = History;
-        }
-        public int Average()
-        {
-            return (Math + Physics + History) / 3;
+            get { return c + d; }
         }
 
-        public override int Info()
+        public float[] array;
+
+        public B(float a, float b) : base(a, b)
         {
-            int[] arr = { Math, Physics, History };
-            return arr.Max();
+
+        }
+        public B()
+        {
+
+        }
+
+        public B(int a, float c2) : base(a, c2)
+        {
+            array = new float[a];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = c2 * i;
+            }
+        }
+
+        public static bool operator true(B b)
+        {
+            return b.d > 0;
+        }
+
+        public static bool operator false(B b)
+        {
+            return b.d < 0;
         }
     }
 }
